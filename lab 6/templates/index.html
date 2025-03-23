@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Detection</title>
+</head>
+<body>
+    <h1>Live Animal Detection</h1>
+
+    <!-- Live Video Stream -->
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+
+    <br><br>
+
+    <!-- Stop Button -->
+    <a href="{{ url_for('stop') }}">
+        <button>Stop Detection & Save Map</button>
+    </a>
+
+    <br><br>
+
+    <!-- Link to Open the Map -->
+    <a href="/static/herd_alert_map.html" target="_blank">
+        <button>View Animal Detection Map</button>
+    </a>
+</body>
+</html>

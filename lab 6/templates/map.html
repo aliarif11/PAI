@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Map</title>
+</head>
+<body>
+    <h1>Animal Detection Alert Map</h1>
+    <iframe src="{{ url_for('static', filename='herd_alert_map.html') }}" width="800px" height="600px"></iframe>
+    <br><br>
+    <a href="{{ url_for('index') }}">
+        <button style="padding: 10px 20px; font-size: 16px;">Back to Live Detection</button>
+    </a>
+</body>
+</html>
