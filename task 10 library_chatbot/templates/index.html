@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Information Chatbot</title>
+    <style>
+        body { font-family: Arial; background: #eef2f3; padding: 20px; }
+        .chat-box { width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        .messages { height: 300px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; }
+        .user, .bot { margin-bottom: 10px; }
+        .user { text-align: right; color: blue; }
+        .bot { text-align: left; color: green; }
+        input[type="text"] { width: 80%; padding: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <div class="chat-box">
+        <h2>📚 Library Info Chatbot</h2>
+        <div class="messages" id="chat"></div>
+        <input type="text" id="userInput" placeholder="Ask me about the library..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        function sendMessage() {
+            var userText = document.getElementById("userInput").value;
+            var chatBox = document.getElementById("chat");
+            if (!userText) return;
+            chatBox.innerHTML += "<div class='user'>" + userText + "</div>";
+            document.getElementById("userInput").value = "";
+
+            fetch("/get?msg=" + encodeURIComponent(userText))
+                .then(response => response.json())
+                .then(data => {
+                    chatBox.innerHTML += "<div class='bot'>" + data.response + "</div>";
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                });
+        }
+    </script>
+</body>
+</html>

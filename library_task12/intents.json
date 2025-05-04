@@ -1,0 +1,81 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "Hey"
+            ],
+            "responses": [
+                "Hello! How can I help you about the library today?"
+            ]
+        },
+        {
+            "tag": "hours",
+            "patterns": [
+                "What are the library hours?",
+                "When does the library open?",
+                "Library timings"
+            ],
+            "responses": [
+                "The library is open from 8 AM to 8 PM, Monday to Saturday."
+            ]
+        },
+        {
+            "tag": "membership",
+            "patterns": [
+                "How to get a membership?",
+                "Library membership",
+                "Join the library"
+            ],
+            "responses": [
+                "Library membership is free for students and staff. You can register online or at the front desk."
+            ]
+        },
+        {
+            "tag": "borrow",
+            "patterns": [
+                "Can I borrow books?",
+                "How many books can I borrow?",
+                "Book borrowing rules"
+            ],
+            "responses": [
+                "Yes, you can borrow up to 5 books at a time for 14 days."
+            ]
+        },
+        {
+            "tag": "fine",
+            "patterns": [
+                "What is the late fine?",
+                "Late return penalty",
+                "Fine for returning books late"
+            ],
+            "responses": [
+                "Late return fines are Rs. 5 per day per book."
+            ]
+        },
+        {
+            "tag": "wifi",
+            "patterns": [
+                "Is there Wi-Fi?",
+                "Internet in library",
+                "Free Wi-Fi"
+            ],
+            "responses": [
+                "Yes, free Wi-Fi is available for all registered users inside the library."
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "Goodbye",
+                "See you"
+            ],
+            "responses": [
+                "Goodbye! Happy reading!"
+            ]
+        }
+    ]
+}
